@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./xgplayer.css" />
 
   <script src="./xgplayer.js" charset="utf-8"></script>
-  <script src="./xgplayerHls2.js" charset="utf-8"></script>
+  <script src="./xgplayerHls2.js?v=1.01" charset="utf-8"></script>
 
 
  
@@ -174,10 +174,7 @@
 
             setTimeout(() => { // 获取视频清晰度，并且进行切换
               let levels = this.player.hls.levels
-              alert(levels)
               this.vidoeUrl = [levels[0].url[0], levels[1].url[0], levels[3].url[0], ]
-              console.log(this.vidoeUrl)
-              alert(this.vidoeUrl)
               this.player.src = this.vidoeUrl[1]
             }, 200)
 
