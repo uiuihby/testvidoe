@@ -143,20 +143,7 @@
             autoplay: true,
             useHls: true,
             hlsOpts: {
-             abrBandWidthUpFactor: 10000000000 ,
-             abrBandWidthFactor:   10000000000 ,
-            xhrSetup: function(xhr, url) {
-              // console.log("///////////////")
-              // console.log(xhr)
-              // console.log(url)
-              // console.log("///////////////")
-            },
-            fetchSetup: function(context, initParams) {
-              console.log("///////////////")
-              console.log(context)
-              console.log(initParams)
-              console.log("///////////////")
-            },
+
             },
             ignores: ['volume', 'fullscreen', 'play'],
             poster: "https://culturecloud.oss-cn-hangzhou.aliyuncs.com/test/202106181152576bbe9b4a055a45d3aa0d3d7bd44195bf_i.jpg",
@@ -188,7 +175,7 @@
             setTimeout(() => { // 获取视频清晰度，并且进行切换
               let levels = this.player.hls.levels
               this.vidoeUrl = [levels[0].url[0], levels[1].url[0], levels[3].url[0], ]
-              // console.log(this.vidoeUrl)
+              console.log(this.vidoeUrl)
 
               this.player.src = this.vidoeUrl[1]
             }, 200)
